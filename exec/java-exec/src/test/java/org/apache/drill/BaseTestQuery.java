@@ -461,8 +461,10 @@ public class BaseTestQuery extends ExecTest {
     int rowCount = 0;
     RecordBatchLoader loader = new RecordBatchLoader(getAllocator());
     for(QueryDataBatch result : results) {
-      rowCount += result.getHeader().getRowCount();
-      loader.load(result.getHeader().getDef(), result.getData());
+      if (result.hasData()) {
+        rowCount += result.getHeader().getRowCount();
+        loader.load(result.getHeader().getDef(), result.getData());
+      }
       // TODO:  Clean:  DRILL-2933:  That load(...) no longer throws
       // SchemaChangeException, so check/clean throw clause above.
       if (loader.getRecordCount() <= 0) {
