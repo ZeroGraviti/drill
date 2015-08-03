@@ -1,3 +1,17 @@
+# Cassandra Storage
+
+Adding Cassandra storage for Apache Drill.
+
+Last Tested with:
+- Drill 1.2.0
+- Cassandra 2.2.0
+
+To build on top of latest Drill's code base rather than this repo - Follow instructions here :
+http://www.confusedcoders.com/bigdata/apache-drill/sql-on-cassandra-querying-cassandra-via-apache-drill
+
+Note: This patch has not implemented all the review comments and might not be fully optimized for Drill-Cassandra. Feel free to drop in bugs or pull requests.
+
+
 # Apache Drill
 
 Apache Drill is a distributed MPP query layer that supports SQL and alternative query languages against NoSQL and Hadoop data storage systems.  It was inspired in part by [Google's Dremel](http://research.google.com/pubs/pub36632.html).  
