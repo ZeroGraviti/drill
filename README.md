@@ -1,4 +1,4 @@
-# Cassandra Storage
+# Cassandra Storage for Apache Drill
 
 Adding Cassandra storage for Apache Drill.
 
