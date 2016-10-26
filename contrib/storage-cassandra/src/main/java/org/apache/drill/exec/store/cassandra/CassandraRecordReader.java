@@ -282,6 +282,7 @@ public class CassandraRecordReader extends AbstractRecordReader implements Drill
     private void updateValueVector(Row row, String colname, int rowCount){
         try {
             String val = getAsString(row, colname);
+            if (val == null) { val = "null"; }
             int start = 0;
             int end = val.length();
 
